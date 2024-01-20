@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7175B99E-A066-3FCE-8468-DEB5F8CFF360}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\bin\cmake.exe -SD:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template -BD:/zDrive/Projects/CG/3D/moon/bin --check-stamp-file D:/zDrive/Projects/CG/3D/moon/bin/external/glfw-3.1.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindOpenGL.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindThreads.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\docs\Doxyfile.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3.pc.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\bin\cmake.exe -SD:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template -BD:/zDrive/Projects/CG/3D/moon/bin --check-stamp-file D:/zDrive/Projects/CG/3D/moon/bin/external/glfw-3.1.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindOpenGL.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindThreads.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\docs\Doxyfile.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3.pc.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\bin\cmake.exe -SD:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template -BD:/zDrive/Projects/CG/3D/moon/bin --check-stamp-file D:/zDrive/Projects/CG/3D/moon/bin/external/glfw-3.1.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindOpenGL.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindThreads.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\docs\Doxyfile.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3.pc.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\bin\cmake.exe -SD:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template -BD:/zDrive/Projects/CG/3D/moon/bin --check-stamp-file D:/zDrive/Projects/CG/3D/moon/bin/external/glfw-3.1.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindOpenGL.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\FindThreads.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\docs\Doxyfile.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3.pc.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\ZERO_CHECK.vcxproj">
+      <Project>{CB8776CB-525D-3A2A-875F-8CF25E4D9FCB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\boing.vcxproj">
+      <Project>{29B23E2E-28EF-3546-9D26-F8327B98781C}</Project>
+      <Name>boing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\clipboard.vcxproj">
+      <Project>{A4806D01-AFCA-3544-9438-A9A72242FCC2}</Project>
+      <Name>clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\cursor.vcxproj">
+      <Project>{32F6AA76-E2BC-3712-8609-51B8305910A6}</Project>
+      <Name>cursor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\empty.vcxproj">
+      <Project>{CDB3C2F3-B187-3510-A327-8792D8839F25}</Project>
+      <Name>empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\events.vcxproj">
+      <Project>{6D7752AF-0325-3F46-A811-E3AD9B834D29}</Project>
+      <Name>events</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\gamma.vcxproj">
+      <Project>{FDC6F044-F290-36CE-A0EB-22548F6EAF4F}</Project>
+      <Name>gamma</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\gears.vcxproj">
+      <Project>{3613DB03-19CD-3D2F-A6F2-6602D42521A5}</Project>
+      <Name>gears</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{1273CBE0-FD29-3427-9F89-20F080170EF2}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\glfwinfo.vcxproj">
+      <Project>{CCC9993F-8B18-36A7-9DBD-7ECACB2BE9F4}</Project>
+      <Name>glfwinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\heightmap.vcxproj">
+      <Project>{14B8BCDA-130A-32DD-8C15-1F7374FE3E02}</Project>
+      <Name>heightmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\iconify.vcxproj">
+      <Project>{4012ACDB-6680-324F-A827-8C89A46FAE28}</Project>
+      <Name>iconify</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\joysticks.vcxproj">
+      <Project>{B6011396-2A0D-3EE6-993F-25532E11F3F4}</Project>
+      <Name>joysticks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\monitors.vcxproj">
+      <Project>{41B6E461-E1EC-33D9-AA6A-59815775FDB4}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\msaa.vcxproj">
+      <Project>{86576E39-97D2-3FEF-96EC-0CBB4C0449BA}</Project>
+      <Name>msaa</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\particles.vcxproj">
+      <Project>{5064EF68-B535-38BA-ADAE-48C39738BE02}</Project>
+      <Name>particles</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\reopen.vcxproj">
+      <Project>{3A395271-CBF9-3E1A-B5C3-873C5A9B5A4F}</Project>
+      <Name>reopen</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\sharing.vcxproj">
+      <Project>{CE332270-9A43-3EBE-AC84-D0C6DA023928}</Project>
+      <Name>sharing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\simple.vcxproj">
+      <Project>{7F5644ED-9A87-3835-8AD3-1649FAEB5421}</Project>
+      <Name>simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\splitview.vcxproj">
+      <Project>{2E094409-32C1-33A5-83AB-8EDE7F89FC0A}</Project>
+      <Name>splitview</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\tearing.vcxproj">
+      <Project>{A0B21C8F-D6F8-3970-AEFD-F9B8194D6C6C}</Project>
+      <Name>tearing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\threads.vcxproj">
+      <Project>{9E7591BC-D6D9-3439-8A5D-FB7991959DFD}</Project>
+      <Name>threads</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\title.vcxproj">
+      <Project>{F12D0E73-E483-3A01-AE9B-ABF0897A3DB0}</Project>
+      <Name>title</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\examples\wave.vcxproj">
+      <Project>{625720AD-0AE7-3B53-A862-6A03E323E420}</Project>
+      <Name>wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\tests\windows.vcxproj">
+      <Project>{07600DFD-F3FA-3FDB-86EB-12246D90164A}</Project>
+      <Name>windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

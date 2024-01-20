@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/CheckIncludeFile.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/CheckLibraryExists.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/FindDoxygen.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/FindOpenGL.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/FindPackageMessage.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/FindThreads.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/morte/Downloads/cmake-3.28.1-windows-x86_64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/CMakeLists.txt
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/cmake_uninstall.cmake.in
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/docs/Doxyfile.in
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/src/glfw3.pc.in
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/src/glfw3Config.cmake.in
+D:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template/external/glfw-3.1.2/src/glfw_config.h.in

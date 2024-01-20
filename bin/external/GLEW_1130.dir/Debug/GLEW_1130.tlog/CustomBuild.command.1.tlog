@@ -1,0 +1,10 @@
+^D:\ZDRIVE\PROJECTS\CG\3D\MOON\SRC\OPENGL-TEMPLATE\EXTERNAL\CMAKELISTS.TXT
+setlocal
+C:\Users\morte\Downloads\cmake-3.28.1-windows-x86_64\bin\cmake.exe -SD:/zDrive/Projects/CG/3D/moon/src/OpenGL-Template -BD:/zDrive/Projects/CG/3D/moon/bin --check-stamp-file D:/zDrive/Projects/CG/3D/moon/bin/external/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

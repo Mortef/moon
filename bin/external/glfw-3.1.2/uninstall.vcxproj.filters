@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\zDrive\Projects\CG\3D\moon\bin\CMakeFiles\6ec6dde55b0a84c1b333877750ffada6\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\external\glfw-3.1.2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\zDrive\Projects\CG\3D\moon\bin\external\glfw-3.1.2\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7CB41A0F-1892-3911-8989-FB456160BD3E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
