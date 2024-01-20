@@ -6,7 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-Playground::Playground() : moon(nullptr), window(nullptr), programID(0), moonTextureID(0) {}
+Playground::Playground() : moon(nullptr), skybox(nullptr), window(nullptr), programID(0), moonTextureID(0), skyboxTextureID(0) {}
 
 void Playground::init() {
     if (!glfwInit()) {
@@ -39,9 +39,13 @@ void Playground::init() {
     programID = LoadShaders("SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
 
     moon = new Sphere(64, 64);
-
     moonTextureID = loadTexture("moon_texture.png");
     moon->setTexture(moonTextureID);
+
+    skybox = new Skybox();
+    skybox->loadShaders("SkyboxVertexShader.vertexshader", "SkyboxFragmentShader.fragmentshader");
+    skyboxTextureID = loadTexture("milky_texture.png");
+    skybox->setTexture(skyboxTextureID);
 
     glfwSetCursorPosCallback(window, MouseController::mouse_callback);
 }
@@ -49,14 +53,6 @@ void Playground::init() {
 void Playground::mainLoop() {
     do {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glUseProgram(programID);
-
-        GLuint moonTextureUniform = glGetUniformLocation(programID, "moonTexture");
-        glUniform1i(moonTextureUniform, 0);
-
-        glm::mat4 Model = glm::mat4(1.0f);
-        Model = glm::rotate(Model, glm::radians(mouse_controller.get_moon_rotation_x()), glm::vec3(1, 0, 0));
-        Model = glm::rotate(Model, glm::radians(mouse_controller.get_moon_rotation_y()), glm::vec3(0, 1, 0));
 
         glm::vec3 cameraPos = glm::vec3(4, 3, -3);
         glm::vec3 up = glm::vec3(0, 1, 0);
@@ -68,10 +64,21 @@ void Playground::mainLoop() {
 
         glm::mat4 View = glm::lookAt(cameraPos, glm::vec3(0, 0, 0), up);
 
-        glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 1024.0f / 768.0f, 0.1f, 100.0f);
+        glm::mat4 Projection = glm::perspective(glm::radians(45.0f), static_cast<float>(SCREEN_WIDTH) / static_cast<float>(SCREEN_HEIGHT), 0.1f, 100.0f);
+
+        glDepthFunc(GL_LEQUAL);
+        skybox->draw(View, Projection);
+        glDepthFunc(GL_LESS);
+
+        glUseProgram(programID);
+        GLuint moonTextureUniform = glGetUniformLocation(programID, "moonTexture");
+        glUniform1i(moonTextureUniform, 0);
+
+        glm::mat4 Model = glm::mat4(1.0f);
+        Model = glm::rotate(Model, glm::radians(mouse_controller.get_moon_rotation_x()), glm::vec3(1, 0, 0));
+        Model = glm::rotate(Model, glm::radians(mouse_controller.get_moon_rotation_y()), glm::vec3(0, 1, 0));
 
         glm::mat4 MVP = Projection * View * Model;
-
         GLuint MatrixID = glGetUniformLocation(programID, "MVP");
         glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 
@@ -82,6 +89,7 @@ void Playground::mainLoop() {
         glfwPollEvents();
     } while (!glfwWindowShouldClose(window));
 }
+
 
 Playground::~Playground() {
     if (moon) {

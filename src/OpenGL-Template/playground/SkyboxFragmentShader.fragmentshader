@@ -1,0 +1,17 @@
+#version 330 core
+out vec4 FragColor;
+
+in vec3 TexCoords;
+
+uniform sampler2D skybox;
+
+const float PI = 3.14159265359;
+
+void main()
+{    
+    vec3 t = normalize(TexCoords);
+    float longitude = atan(t.z, t.x);
+    float latitude = acos(t.y);
+    vec2 uv = vec2((longitude + PI) / (2.0 * PI), latitude / PI);
+    FragColor = texture(skybox, uv);
+}

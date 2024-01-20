@@ -8,6 +8,7 @@
 #include "sphere.h"
 #include "texture_loader.h"
 #include "mouse_controller.h"
+#include "skybox.h"
 
 class Playground {
 public:
@@ -19,8 +20,9 @@ public:
 private:
     GLFWwindow* window;
     Sphere* moon;
+    Skybox* skybox;
     GLuint programID;
-    GLuint moonTextureID;
+    GLuint moonTextureID, skyboxTextureID;
     MouseController mouse_controller;
 };
 

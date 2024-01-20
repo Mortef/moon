@@ -1,5 +1,6 @@
 D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\playground\playground.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\playground.obj
 D:\zDrive\Projects\CG\3D\moon\bin\mouse_controller.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\mouse_controller.obj
+D:\zDrive\Projects\CG\3D\moon\bin\skybox.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\skybox.obj
 D:\zDrive\Projects\CG\3D\moon\bin\sphere.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\sphere.obj
 D:\zDrive\Projects\CG\3D\moon\bin\texture_loader.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\texture_loader.obj
 D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\common\shader.cpp;D:\zDrive\Projects\CG\3D\moon\bin\playground.dir\Debug\shader.obj

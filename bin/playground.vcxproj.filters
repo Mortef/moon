@@ -16,6 +16,9 @@
     <ClCompile Include="sphere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="skybox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\playground\playground.h">
@@ -36,6 +39,9 @@
     <ClInclude Include="sphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="skybox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\CMakeLists.txt" />
@@ -45,6 +51,12 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="D:\zDrive\Projects\CG\3D\moon\src\OpenGL-Template\playground\SimpleVertexShader.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\src\OpenGL-Template\playground\SkyboxVertexShader.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\src\OpenGL-Template\playground\SkyboxFragmentShader.fragmentshader">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
