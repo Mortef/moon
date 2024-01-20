@@ -1,2 +1,5 @@
 ﻿  playground.cpp
+  mouse_controller.cpp
+  skybox.cpp
+D:\zDrive\Projects\CG\3D\moon\bin\skybox.cpp(34,36): warning C4101: 'e': unreferenced local variable
   playground.vcxproj -> D:\zDrive\Projects\CG\3D\moon\bin\Debug\playground.exe

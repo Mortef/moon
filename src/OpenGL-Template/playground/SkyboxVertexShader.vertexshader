@@ -1,14 +1,22 @@
 #version 330 core
-layout (location = 0) in vec3 aPos;
 
-out vec3 TexCoords;
+// Vertex input from the VBO
+layout (location = 0) in vec3 aPos; // Position of the vertex
 
-uniform mat4 projection;
-uniform mat4 view;
+// Outputs to the fragment shader
+out vec3 TexCoords; // Texture coordinates passed to the fragment shader
 
-void main()
-{
+// Uniforms
+uniform mat4 projection; // Projection matrix
+uniform mat4 view;       // View matrix (without translation)
+
+void main() {
+    // Pass through the texture coordinates
     TexCoords = aPos;
+
+    // Transform the vertex position to clip space
     vec4 pos = projection * view * vec4(aPos, 1.0);
+
+    // Set the position, modifying the Z component to ensure the skybox is always rendered behind other objects
     gl_Position = pos.xyww;
 }

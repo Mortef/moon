@@ -1,17 +1,32 @@
 #version 330 core
+
+// Output color to the framebuffer
 out vec4 FragColor;
 
+// Input texture coordinates from the vertex shader
 in vec3 TexCoords;
 
-uniform sampler2D skybox;
+// Uniforms
+uniform sampler2D skybox; // Texture sampler for skybox texture
 
 const float PI = 3.14159265359;
 
-void main()
-{    
-    vec3 t = normalize(TexCoords);
+/**
+ * Converts 3D texture coordinates to 2D UV coordinates.
+ * @param texCoords 3D texture coordinates.
+ * @return 2D UV coordinates.
+ */
+vec2 convertToUV(vec3 texCoords) {
+    vec3 t = normalize(texCoords);
     float longitude = atan(t.z, t.x);
     float latitude = acos(t.y);
-    vec2 uv = vec2((longitude + PI) / (2.0 * PI), latitude / PI);
+    return vec2((longitude + PI) / (2.0 * PI), latitude / PI);
+}
+
+void main() {
+    // Calculate 2D UV coordinates from 3D texture coordinates
+    vec2 uv = convertToUV(TexCoords);
+
+    // Sample the texture color using the UV coordinates and set it as the output color
     FragColor = texture(skybox, uv);
 }

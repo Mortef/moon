@@ -1,9 +1,13 @@
 #version 330 core
+
+// Input texture coordinates from vertex shader
 in vec2 UV;
+
+// Output color to the framebuffer
 out vec3 color;
 
-uniform sampler2D moonTexture; 
+// Uniforms
+uniform sampler2D moonTexture; // Texture sampler for moon texture
 
-void main() {
-    color = texture(moonTexture, UV).rgb;
-}
+// Sample the texture color using the UV coordinates and set it as the output color
+void main() { color = texture(moonTexture, UV).rgb; }

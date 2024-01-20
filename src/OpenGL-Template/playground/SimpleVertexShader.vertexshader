@@ -1,12 +1,19 @@
 #version 330 core
-layout(location = 0) in vec3 vertexPosition_modelspace;
-layout(location = 1) in vec2 vertexUV;
 
-out vec2 UV;
+// Vertex attributes
+layout(location = 0) in vec3 vertexPosition_modelspace; // Position of the vertex in model space
+layout(location = 1) in vec2 vertexUV; // UV texture coordinates of the vertex
 
-uniform mat4 MVP; 
+// Outputs to the fragment shader
+out vec2 UV; // Pass UV coordinates to the fragment shader
+
+// Uniforms
+uniform mat4 MVP; // Model-View-Projection matrix
 
 void main() {
+    // Transform vertex position to clip space
     gl_Position = MVP * vec4(vertexPosition_modelspace, 1.0);
+
+    // Pass UV coordinates to the fragment shader
     UV = vertexUV;
 }

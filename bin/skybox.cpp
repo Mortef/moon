@@ -1,15 +1,10 @@
 #include "skybox.h"
-#include <stb_image.h>
-#include <iostream>
-#include <fstream>
-#include <sstream>
 
-
-Skybox::Skybox()
-    : shaderProgram(0) {
+Skybox::Skybox() : shaderProgram(0) {
     setupSkybox();
 }
 
+// Loads and compiles shaders for the skybox from given file paths.
 void Skybox::loadShaders(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
     GLuint vertexShader = compileShader(vertexShaderPath, GL_VERTEX_SHADER);
     GLuint fragmentShader = compileShader(fragmentShaderPath, GL_FRAGMENT_SHADER);
@@ -23,6 +18,7 @@ void Skybox::loadShaders(const std::string& vertexShaderPath, const std::string&
     glDeleteShader(fragmentShader);
 }
 
+// Compiles a shader from the given source file.
 GLuint Skybox::compileShader(const std::string& shaderPath, GLenum shaderType) {
     std::string shaderCode;
     std::ifstream shaderFile;
@@ -52,27 +48,32 @@ Skybox::~Skybox() {
     glDeleteBuffers(1, &VBO);
 }
 
+// Sets the texture ID for the skybox.
 void Skybox::setTexture(GLuint newTextureID) {
     textureID = newTextureID;
 }
 
+//Renders the skybox using the current OpenGL context.
 void Skybox::draw(const glm::mat4& view, const glm::mat4& projection) {
     glDepthMask(GL_FALSE);
     glDisable(GL_BLEND);
 
     glUseProgram(shaderProgram);
 
-    glm::mat4 viewNoTranslation = glm::mat4(glm::mat3(view));
+    glm::mat4 viewNoTranslation = glm::mat4(glm::mat3(view)); // Remove translation from the view matrix
 
+    // Set view and projection matrices in the shader
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
     GLuint projLoc = glGetUniformLocation(shaderProgram, "projection");
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(viewNoTranslation));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
+    // Bind the skybox texture
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureID);
     glUniform1i(glGetUniformLocation(shaderProgram, "skybox"), 0);
 
+    // Draw the skybox
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
     glBindVertexArray(0);
@@ -80,10 +81,9 @@ void Skybox::draw(const glm::mat4& view, const glm::mat4& projection) {
     glDepthMask(GL_TRUE);
 }
 
-
-
+//Sets up the geometry for the skybox.
 void Skybox::setupSkybox() {
-    float skyboxVertices[] = {         
+    float skyboxVertices[] = {
         -1.0f,  1.0f, -1.0f,
         -1.0f, -1.0f, -1.0f,
          1.0f, -1.0f, -1.0f,
