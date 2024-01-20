@@ -11,12 +11,12 @@ public:
 
     float get_moon_rotation_x() const;
     float get_moon_rotation_y() const;
-    float get_camera_rotation_x() const;
-    float get_camera_rotation_y() const;
+    static float get_camera_yaw();
+    static float get_camera_pitch();
 
 private:
     static float moon_rotation_x, moon_rotation_y;
-    static float camera_rotation_x, camera_rotation_y;
+    static float camera_yaw, camera_pitch;
     static double last_mouse_pos_x, last_mouse_pos_y;
     static bool first_mouse;
 };

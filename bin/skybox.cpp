@@ -19,15 +19,11 @@ void Skybox::loadShaders(const std::string& vertexShaderPath, const std::string&
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
 
-    // Check for linking errors...
-    // ...
-
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 }
 
 GLuint Skybox::compileShader(const std::string& shaderPath, GLenum shaderType) {
-    // Read shader code from file
     std::string shaderCode;
     std::ifstream shaderFile;
     shaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
@@ -47,9 +43,6 @@ GLuint Skybox::compileShader(const std::string& shaderPath, GLenum shaderType) {
     GLuint shader = glCreateShader(shaderType);
     glShaderSource(shader, 1, &shaderCodeCStr, NULL);
     glCompileShader(shader);
-
-    // Check for compilation errors...
-    // ...
 
     return shader;
 }

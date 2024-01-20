@@ -16,6 +16,7 @@ public:
     ~Playground();
     void init();
     void mainLoop();
+    static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
 private:
     GLFWwindow* window;
@@ -24,6 +25,7 @@ private:
     GLuint programID;
     GLuint moonTextureID, skyboxTextureID;
     MouseController mouse_controller;
+    float moonScale;
 };
 
 #endif
